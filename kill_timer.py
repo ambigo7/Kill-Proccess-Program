@@ -18,8 +18,6 @@ def main():
 	if switch == "1":
 		global num
 		num = 0
-		#waktu(num)
-		print("Start the application end task...")
 	elif switch == "2":
 		print("----------------Options----------------")
 		print("A. 15 Minute")
