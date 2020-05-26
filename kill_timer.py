@@ -9,7 +9,6 @@ def waktu(tm):
 def main():
 	print("\n------Close Application With Timer In Python-----")
 	app = input("Application Name : ")
-	print("")
 	print("Program Execution Options: ")
 	print("1. Now")
 	print("2. Set Timer")
