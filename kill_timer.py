@@ -1,5 +1,6 @@
 import os
 import time
+from tqdm import tqdm
 
 num = 0
 
@@ -9,6 +10,7 @@ def waktu(tm):
 def main():
 	print("\n------Close Application With Timer In Python-----")
 	app = input("Application Name : ")
+	print("")
 	print("Program Execution Options: ")
 	print("1. Now")
 	print("2. Set Timer")
@@ -17,6 +19,8 @@ def main():
 	if switch == "1":
 		global num
 		num = 0
+		#waktu(num)
+		print("Start the application end task...")
 	elif switch == "2":
 		print("----------------Options----------------")
 		print("A. 15 Minute")
@@ -35,7 +39,8 @@ def main():
 			num = int(input("Input Time[second] : "))
 	print("Start the application end task...")
 	print("End Task "+app+" in {} second".format(num))
-	waktu(num)
+	for i in tqdm(range(4)):
+		waktu(num)
 	os.system("taskkill /f /im "+app+".exe")
 
 main()
